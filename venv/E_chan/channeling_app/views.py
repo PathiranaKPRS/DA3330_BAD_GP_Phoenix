@@ -18,25 +18,26 @@ def index(request):
     return render(request,'index.html')
 
 def login(request):
-    error=""
-    if request.method =="post":
-        u=request.post['username']
-        p=request.post['password']
+    error = ""
+    if request.method =="POST":
+        u=request.POST['username']
+        p=request.POST['password']
         user =authenticate(username=u,password=p)
         try:
             if user.is_staff:
-                login(request,user)
-                error="no"
+                login(request, user)
+                error="No"
             else:
                 error="yes"
 
         except:
             error="yes"
-    e={'error':error}
-    return render(request,'logins.html',e)
+    d = {'error':error}
+    return render(request,'logins.html',d)
 
 def logout_admin(request):
     if not request.user.is_staff:
         return redirect('login')
+    
     logout(request)
-    return redirect('admin_login')
+    return redirect('login')

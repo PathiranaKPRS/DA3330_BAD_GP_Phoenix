@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import about,home,contactus,login, logout_admin
+from .views import about,home,contactus,login,logout_admin
 
 urlpatterns = [
     path('',home,name='home'),
