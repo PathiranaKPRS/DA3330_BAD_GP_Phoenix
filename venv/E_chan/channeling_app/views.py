@@ -26,18 +26,17 @@ def login(request):
         try:
             if user.is_staff:
                 login(request,user)
-                error="No"
+                error="no"
             else:
-                error="Yes"
+                error="yes"
 
         except:
-            error="Yes"
+            error="yes"
     e={'error':error}
     return render(request,'logins.html',e)
 
 def logout_admin(request):
     if not request.user.is_staff:
         return redirect('login')
-
     logout(request)
-    return redirect('login')
+    return redirect('admin_login')
