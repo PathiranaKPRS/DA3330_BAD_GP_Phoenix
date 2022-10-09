@@ -19,7 +19,7 @@ def index(request):
 
 def login(request):
     error=""
-    if request.method=="post":
+    if request.method =="post":
         u=request.post['username']
         p=request.post['password']
         user =authenticate(username=u,password=p)
