@@ -34,3 +34,10 @@ def login(request):
             error="Yes"
     e={'error':error}
     return render(request,'logins.html',e)
+
+def logout_admin(request):
+    if not request.user.is_staff:
+        return redirect('login')
+
+    logout(request)
+    return redirect('login')
