@@ -1,31 +1,109 @@
+<style>
+body {
+  font-family:Georgia, Arial, Helvetica, sans-serif;
+  height:100%;
+  background-image: url("https://img.freepik.com/free-photo/young-handsome-physician-medical-robe-with-stethoscope_1303-17818.jpg?w=996&t=st=1665263146~exp=1665263746~hmac=7db2c4e612471286832766c6c22309cc44dd2c44daea5634fa3b27c23a7046eb");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.navbar {
+  background-color: #333;
+}
+
+.nav-item {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav-item :hover, .dropdown:hover .dropbtn {
+  background-color:grey;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  overflow: hidden;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.intro {
+  padding-top: 50px;
+  padding-right:800px;
+  font-family:Georgia;
+  font-size:32px;
+  text-align: center;
+}
+.logo-image {
+  margin-top:10px;
+  overflow:hidden;
+  object-fit:contain;
+  float:left;
+  max-width:100px;
+  max-height:100px;
+ }
+</style>
+
+
+
+<body>
+
 <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Phoenix E-Channeling</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:8000/about/">About US</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:8000/contactus/">Contact Us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Login
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">Admin</a></li>
-              <li><a class="dropdown-item" href="#">Doctors</a></li>
-              <li><a class="dropdown-item" href="#">Patients</a></li>
-            </ul>
-          </li>
-        </ul> 
-      </div>
+  <div class="container-fluid">
+    <div class="logo-image">
+      <img src="ttps://images1-fabric.practo.com/practices/1180685/phoenix-hospital-bangalore-5a9e8bb5b9e1d.jpg"  style="vertical-align:middle">
     </div>
-  </nav>
+    <a class="navbar-brand" href="#">Phoenix E-Channelling</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"  aria-expanded="false">
+            Login</a>
+            <div class="dropdown-content">
+              <a href="#">Admin</a>
+              <a href="#">Doctors</a>
+              <a href="#">Patients</a>
+            </div>
+        </div>
+        
+      </ul>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="intro">
+  <h1>Making Health Care Better Together</h1>
+  <p>Partnerships for Health</p>
+
+</body>
