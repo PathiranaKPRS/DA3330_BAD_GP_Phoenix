@@ -1,5 +1,5 @@
 from re import U
-from django.shortcuts import redirect, render, redirect
+from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 # Create your views here.
@@ -20,19 +20,19 @@ def index(request):
 def login(request):
     error = ""
     if request.method =="POST":
-        u=request.POST['username']
-        p=request.POST['password']
-        user =authenticate(username=u,password=p)
+        u = request.POST['username']
+        p = request.POST['password']
+        user = authenticate(username=u,password=p)
         try:
             if user.is_staff:
-                login(request, user)
+                login(request,user)
                 error="No"
             else:
                 error="yes"
 
         except:
             error="yes"
-    d = {'error':error}
+    d = {'error': error}
     return render(request,'logins.html',d)
 
 def logout_admin(request):
