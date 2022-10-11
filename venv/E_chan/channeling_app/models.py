@@ -16,6 +16,8 @@ class Patient(models.Model):
     ContactNo = models.IntegerField(null=True)
 
 class Appoinment(models.Model):
-    doctor=models.ForeignKey(Doctor,on_delete=models.CASCADE)
-    Patient=models.ForeignKey(Patient,on_delete=models.CASCADE)
-    Date_time=models.DateTimeField()
+    Name = models.CharField(max_length=60) 
+    Phone =models.IntegerField(max_length=10)
+    Email =models.EmailField(max_length=50)
+    Address =models.CharField(max_length=80)
+    
