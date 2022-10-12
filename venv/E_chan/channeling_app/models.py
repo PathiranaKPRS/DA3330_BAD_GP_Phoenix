@@ -4,10 +4,7 @@ from unittest.util import _MAX_LENGTH
 from django.db import models
 
 # Create your models here.
-class Doctor(models.Model):
-    Name = models.CharField(max_length=40)
-    Specialty = models.CharField(max_length=40)
-    Reg_number = models.IntegerField()
+
 
 class Patient(models.Model):
     Name = models.CharField(max_length=60)
