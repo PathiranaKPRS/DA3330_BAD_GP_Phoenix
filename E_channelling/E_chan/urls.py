@@ -10,4 +10,5 @@ urlpatterns = [
     path("login/", login_request, name="login"),
     path("logout/", logout_request, name= "logout"),
     path("appointment/", appointment, name="appointment"),
+    path("doctorlist/", doctorlist, name="doctorlist")
 ]
