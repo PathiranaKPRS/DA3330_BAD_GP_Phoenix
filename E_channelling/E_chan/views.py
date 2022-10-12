@@ -69,13 +69,13 @@ def logout_request(request):
 
 def appointment(request):
     if request.method == "POST":
-        your_name = request.POST['your-name']
-        your_phone = request.POST['your-phone']
-        your_email = request.POST['your-email']
-        your_address = request.POST['your-address']
-        your_schedule = request.POST['your-schedule']
-        your_date = request.POST['your-date']
-        your_message = request.POST['your-message']
+        yourname = request.POST['your-name']
+        yourphone = request.POST['your-phone']
+        youremail = request.POST['your-email']
+        youraddress = request.POST['your-address']
+        yourschedule = request.POST['your-schedule']
+        yourdate = request.POST['your-date']
+        yourmessage = request.POST['your-message']
 
         return render(request, 'appointment.html', {
             'your_name': your_name,
