@@ -31,11 +31,11 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Welcome, {{user.username}}</a>
       </li>
-
+    </ul>
       {% else %}
-
+      <ul class="navbar-nav mr-right">
       <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
+        <b><a class="nav-link" href="/login">Login</a></b>
       </li>
 
       {% endif %}
