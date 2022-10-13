@@ -89,3 +89,6 @@ def appointment(request):
 
     else:
         return render(request, 'home.html', {})
+
+def doctorlist(request):
+    return render(request, 'doctorlist.html')
