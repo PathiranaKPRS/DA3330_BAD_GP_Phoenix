@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
 
+
 # Create your views here.
 def contactus(request):
     return render(request, 'contactus.html')
@@ -52,7 +53,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}.")
-                return redirect("home")
+                return redirect("afterlogin")
             else:
                 messages.error(request, "Invalid username or password.")
         else:
@@ -92,3 +93,7 @@ def appointment(request):
 
 def doctorlist(request):
     return render(request, 'doctorlist.html')
+
+def afterlogin(request):
+    return render(request, 'afterlogin.html')
+
