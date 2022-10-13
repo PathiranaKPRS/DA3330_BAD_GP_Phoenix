@@ -1,20 +1,44 @@
 {% include 'base.html'%}
 {% include 'navigation.html'%}
+<style>
+	h1 {
+        text-align: center;
+        color: #ffffff;
+        }
+	div{
+		text-align: center;
+		color: #ffffff;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+	}
+	.page-holder {
+  		min-height: 100vh;
+	}
 
+	.bg-cover {
+  		background-size: cover !important;
+	}
+	
+</style>
+	
+<div style = "background: url(https://bootstrapious.com/i/snippets/sn-bg-image/bg.jpg)" class="page-holder bg-cover">
+	<a><h1>Welcome to Phoenix E-Channelling Registration Portal</h1></a>
 
-{% block content %}
 
 {% load crispy_forms_tags %}
+  
+  <!--Register-->
+	<div class="container py-5" text-align:center>
+	  	<h2>Register</h2>
+	  	<form method="POST">
+		  {% csrf_token %}
+		  {{ register_form|crispy }}
+		  <button class="btn btn-primary" type="submit">Register</button>
+	  	</form>
+	  	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+  	</div>
+  
+</div>	
 
-<!--Register-->
-<div class="container py-5">
-	<h1>Register</h1>
-	<form method="POST">
-		{% csrf_token %}
-		{{ register_form|crispy }}
-		<button class="btn btn-primary" type="submit">Register</button>
-	</form>
-	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
-</div>
-
-{% endblock %}
+  
