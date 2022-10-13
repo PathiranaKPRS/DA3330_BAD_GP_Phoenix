@@ -20,7 +20,11 @@ class Patient(models.Model):
     ContactNo = models.IntegerField(null=True)
 
 class Appoinment(models.Model):
-    doctor=models.ForeignKey(Doctor,on_delete=models.CASCADE)
-    Patient=models.ForeignKey(Patient,on_delete=models.CASCADE)
-    Date_time=models.DateTimeField()
+    your_name=models.CharField(max_length=255, default="Phoenix")
+    your_phone=models.IntegerField(default="0123456789")
+    your_email=models.EmailField(max_length=255, default="Phoenix@gmail.com")
+    your_address=models.CharField(max_length=255, default="Phoenix")
+    your_schedule=models.CharField(max_length=255, default="Phoenix")
+    your_date=models.CharField(max_length=255, default="Phoenix")
+    your_message=models.TextField(max_length=255, default="Phoenix")
 # Create your models here.
