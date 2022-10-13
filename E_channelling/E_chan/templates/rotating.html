@@ -9,50 +9,47 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+  max-width: 800px;
+  margin-left: auto;
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: rgb(6, 4, 20);
   font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 100%;
   text-align: center;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: #5c5959;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top:15%;
 }
 
 /* The dots/bullets/indicators */
 .dot {
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 1px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.5s ease;
 }
 
 .active {
-  background-color: #717171;
+  background-color: #605e5e;
 }
 
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 10s;
 }
 
 @keyframes fade {
@@ -68,35 +65,50 @@ img {vertical-align: middle;}
 </head>
 <body>
 
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
-
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="https://images1-fabric.practo.com/practices/1180685/phoenix-hospital-bangalore-5a9e8bb5b9e1d.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <div class="numbertext">1 / 6</div>
+  <img src="https://media.istockphoto.com/photos/medical-heart-cardiology-concept-picture-id1166044116?k=20&m=1166044116&s=612x612&w=0&h=BfKFmV5-34tJXyX4jbmzMJnAHW5UdphVUGMlhy1ujEo=" style="width:100%">
+  <div class="text">Cardiology</div>
+
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_cardiac_science.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
+  <div class="numbertext">2 / 6</div>
+  <img src="https://media.istockphoto.com/photos/asian-female-pediatrician-doctor-examining-her-little-baby-patient-picture-id1334655757?k=20&m=1334655757&s=612x612&w=0&h=M8mDhEfxLUNGWbCz7QzT5ssEjQPHr86YaJdeevk-dws=" style="width:100%">
+  <div class="text">Pediatrics</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="https://cdn.zephyrcms.com/171c9fa9-3167-4118-9d15-4aeb6281b5d5/page-maternity-center.png" style="width:100%">
-  <div class="text">Caption Three</div>
+  <div class="numbertext">3 / 6</div>
+  <img src="https://media.istockphoto.com/photos/at-doctors-appointment-physician-shows-to-patient-shape-of-brain-with-picture-id1139068109?k=20&m=1139068109&s=612x612&w=0&h=k0jWV5sDVSeh-R_B8lCQH5mMYDvihUS-cQXzLAsIPt0=" style="width:100%">
+  <div class="text">Neurology</div>
 </div>
-
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="https://media.istockphoto.com/photos/dentist-and-patient-discussion-about-planned-teeth-treatment-in-picture-id1168002540?k=20&m=1168002540&s=612x612&w=0&h=KnKADSAP8sI4iCEcDyIIuX6BTd1KhcExqJLAX8OmPxI=" style="width:100%">
+  <div class="text">Dental</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="https://media.istockphoto.com/photos/pregnant-woman-on-ultrasound-picture-id1251576068?k=20&m=1251576068&s=612x612&w=0&h=-b7DzFEhrdRPjVQiOSd855AAuJGImX8x4Rna1_vmmDk=" style="width:100%">
+  <div class="text">Maternity</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="https://media.istockphoto.com/photos/face-skin-care-facial-hydro-microdermabrasion-peeling-treatment-picture-id501398614?k=20&m=501398614&s=612x612&w=0&h=G7NKi26IsH0LaqU16RN0wqtWbMElR3E0iETzmSZhRPY=" style="width:100%">
+  <div class="text">Dermatology</div>
+</div>
 </div>
 <br>
 
-<div style="text-align:center">
+<div style="text-align:right">
   <span class="dot"></span> 
   <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
   <span class="dot"></span> 
 </div>
 
@@ -118,7 +130,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 8000); // Change image every 2 seconds
 }
 </script>
 
