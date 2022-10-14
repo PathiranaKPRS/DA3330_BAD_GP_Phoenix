@@ -4,13 +4,15 @@
 <style>
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
+.mySlides {display:inline-block;}
 img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 800px;
+  max-width: 50%;
   margin-left: auto;
+  position: relative;
+  display: inline-block:
 }
 
 /* Caption text */
@@ -29,6 +31,7 @@ img {vertical-align: middle;}
   padding: 8px 12px;
   position: absolute;
   top:15%;
+  display:block;
 }
 
 /* The dots/bullets/indicators */
@@ -38,7 +41,6 @@ img {vertical-align: middle;}
   margin: 0 1px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
   transition: background-color 0.5s ease;
 }
 

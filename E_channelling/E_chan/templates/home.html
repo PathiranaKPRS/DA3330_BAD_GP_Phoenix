@@ -1,10 +1,8 @@
 {% include 'base.html'%}
 {% include 'navigation.html'%}
-{% include 'rotating.html'%}
+
 
 {% block content %}
-<h1 class="text-center">Welcome to Phoenix E-Channeling</h1>
-
 <!-- Book An Oppointment Area Start -->
 {% if user.is_authenticated %}
   
@@ -13,4 +11,261 @@
 {% if user.is_staff %}
 Dashboard
 {% endif %}
-{% endblock content %}
+{% endblock content %}
+
+<head>
+<style>
+header .item {
+  height: 100vh;
+  position: relative;
+}
+
+header .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header .item .cover {
+  padding: 75px 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+
+header .item .cover .header-content {
+  position: relative;
+  padding: 56px;
+  overflow: hidden;
+}
+
+header .item .cover .header-content .line {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border: 9px solid #fff;
+  -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+  clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+}
+
+header .item .cover .header-content h2 {
+  font-weight: 300;
+  font-size: 35px;
+  color: #fff;
+}
+
+header .item .cover .header-content h1 {
+  font-size: 56px;
+  font-weight: 600;
+  margin: 5px 0 20px;
+  word-spacing: 3px;
+  color: #fff;
+}
+
+header .item .cover .header-content h4 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+  color: #fff;
+}
+
+header .owl-item.active h1 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+
+header .owl-item.active h2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+
+header .owl-item.active h4 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  animation-delay: 0.3s;
+}
+
+header .owl-item.active .line {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+  animation-delay: 0.3s;
+}
+
+header .owl-nav .owl-prev {
+  position: absolute;
+  left: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+
+header .owl-nav .owl-prev span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+
+header .owl-nav .owl-prev:focus {
+  outline: 0;
+}
+
+header .owl-nav .owl-prev:hover {
+  background: #000 !important;
+}
+
+header .owl-nav .owl-next {
+  position: absolute;
+  right: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+
+header .owl-nav .owl-next span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+
+header .owl-nav .owl-next:focus {
+  outline: 0;
+}
+
+header .owl-nav .owl-next:hover {
+  background: #000 !important;
+}
+
+header:hover .owl-prev {
+  left: 0px;
+  opacity: 1;
+}
+
+header:hover .owl-next {
+  right: 0px;
+  opacity: 1;
+}
+
+</style>    
+</head>
+<body>
+    
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+<header>
+    <div class="owl-carousel owl-theme">
+                            
+        <div class="item">
+            <img src="https://media.istockphoto.com/photos/asian-female-pediatrician-doctor-examining-her-little-baby-patient-picture-id1334655757?k=20&m=1334655757&s=612x612&w=0&h=M8mDhEfxLUNGWbCz7QzT5ssEjQPHr86YaJdeevk-dws=" style="width:100%" alt="">
+            <div class="cover">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="line animated bounceInLeft"></div>
+                        <h1>Welcome to Phoenix E_Channelling</h1>
+                        <h2>Exceptional care. Without exception.</h2>
+                        <h4>The network for Exceptional care.</h4>
+                        <h6>Phoenix Hospital Network</h6>
+                    </div>
+                </div>
+             </div>
+        </div>                
+        <div class="item">
+            <img src="https://media.istockphoto.com/photos/at-doctors-appointment-physician-shows-to-patient-shape-of-brain-with-picture-id1139068109?k=20&m=1139068109&s=612x612&w=0&h=k0jWV5sDVSeh-R_B8lCQH5mMYDvihUS-cQXzLAsIPt0=" style="width:100%" alt="">
+            <div class="cover">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="line animated bounceInLeft"></div>
+                        <h1>Welcome to Phoenix E_Channelling</h1>
+                        <h2>The best doctors all over the country</h2>
+                        
+                    </div>
+                </div>
+             </div>
+        </div>
+        <div class="item">
+            <img src="https://media.istockphoto.com/photos/dentist-and-patient-discussion-about-planned-teeth-treatment-in-picture-id1168002540?k=20&m=1168002540&s=612x612&w=0&h=KnKADSAP8sI4iCEcDyIIuX6BTd1KhcExqJLAX8OmPxI=" style="width:100%" alt="">
+            <div class="cover">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="line animated bounceInLeft"></div>
+                        <h1>Welcome to Phoenix E_Channelling</h1>
+                        <h2>Top-notch technology for your cure.</h2>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</header>
+
+{% include 'footer.html'%}
+</body>
+<script>
+$('.owl-carousel').owlCarousel ({
+    loop:true,
+    margin:5,
+    dots:false,
+    nav:true,
+    mouseDrag:false,
+    autoplay:true,
+    animateOut: 'slideOutUp',
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },    
+        600:{
+            items:1  
+        },
+        1000:{
+            items:2
+        }
+    }
+});
+    
+</script>
