@@ -3,10 +3,28 @@
 {% block title %}Set an Appoinment{%endblock %}
 {% block meta_description %}Appointment{% endblock %}
 
+<style>
+/* body {
+  background-image: url(https://phonoteka.org/uploads/posts/2021-05/1621656188_11-phonoteka_org-p-fon-dlya-prezentatsii-po-ginekologii-12.jpg);
+} */
+/* .page-holder {
+  		min-height: 100vh;
+	}
+
+.bg-cover {
+  		background-size: cover !important;
+	} */
+</style>
+<head>
+</head>
+<body>
+<!-- <div style = "background: url(https://phonoteka.org/uploads/posts/2021-05/1621656188_11-phonoteka_org-p-fon-dlya-prezentatsii-po-ginekologii-12.jpg)" class="page-holder bg-cover"> -->
+	
+
 {% block content %}
 
   <!-- ***** Breadcrumb Area Start ***** -->
-  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url('#');">
+  <div class="breadcumb-area bg-img bg-gradient-overlay">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12">
@@ -22,7 +40,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Set Appointment</li>
+              <li class="breadcrumb-item active" aria-current="page">Appointment Set</li>
             </ol>
           </nav>
         </div>
@@ -34,23 +52,26 @@
 
 
   <!-- ***** Contact Area Start ***** -->
-
+  
  <center>
- 	<h1>Review Your Information:</h1>
-	<strong>Your Name: </strong>{{your_name}}<br/>
-	<strong>Phone: </strong>{{your_phone}}<br/>
-	<strong>Email: </strong>{{your_email}}<br/>
-	<strong>Address: </strong>{{your_address}}<br/>
-	<strong>When: </strong>{{your_schedule}}<br/>
-	<strong>Appointment Day: </strong>{{your_date}}<br/>
-	<strong>Your Message: </strong>{{your_message}}<br/>
+ 	<h1>Review Your Details:</h1>
+  <br/><br/>
+	<p><strong>Your Name: </strong>{{your_name}}<br/></p>
+	<p><strong>Phone: </strong>{{your_phone}}<br/></p>
+	<p><strong>Email: </strong>{{your_email}}<br/></p>
+	<p><strong>Address: </strong>{{your_address}}<br/></p>
+	<p><strong>When: </strong>{{your_schedule}}<br/></p>
+	<p><strong>Appointment Day: </strong>{{your_date}}<br/></p>
+	<p><strong>Your Message: </strong>{{your_message}}<br/></p>
+
 
 
 <br/><br/>
-<strong>Note: </strong> This appointment hasn't been set yet. We will contact you shortly via telephone to confirm your appointment.
+<strong> Appointment have been successfully set!! We will contact you shortly via Email or Phone to confirm your appointment.</strong>
 
 </center>
 <br/><br/><br/><br/>
   <!-- ***** Contact Area End ***** -->
 
 {% endblock %}
+</body>

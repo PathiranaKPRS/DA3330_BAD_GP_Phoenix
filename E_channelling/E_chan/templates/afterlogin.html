@@ -2,21 +2,67 @@
 <html lang="en">
 {% include 'base.html'%}
 {% include 'navigation.html'%}
+
+<style>
+	h1 {
+        text-align: center;
+        color: #141313;
+        padding-top: 0.25cm;
+        padding-bottom: 0.5cm;
+        }
+	div{
+		text-align: center;
+		color: #141313;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+	}
+	.page-holder {
+  		min-height: 100vh;
+	}
+
+	.bg-cover {
+  		background-size: cover !important;
+	} 
+	.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 0.8cm;
+}
+.input{
+    width: 150px;
+    display: inline-block;
+}
+
+</style>
 <head>
 </head>
 <body>
-<section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('#');">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center white">
-            <h2>Book An Apointment</h2>
-            <div class="line"></div>
+<div style = "background: url(https://images.ctfassets.net/qr8kennq1pom/2GXvmNnqnCSe2qKIUcuO86/8aa2f0b7d7a5852222ab3d9aea49d975/health_insurance.jpg?fm=webp&q=70&w=1366)" class="page-holder bg-cover">
+	
+  
+  <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('#');">
+      <div class="container">
+        <div class="row">
+          <!-- Section Heading -->
+          <div class="col-12">
+            <div class="section-heading text-center white">
+              <h1>Book An Apointment</h1>
+              <div class="line"></div>
+            </div>
           </div>
         </div>
-      </div>
-
+      
       <div class="row">
         <div class="col-12">
           <!-- Appointment Form -->
@@ -105,16 +151,16 @@
                   </div>
                 </div>
                 <div class="col-12 text-center">
-                  <button type="submit" class="btn dento-btn">Booking Now</button>
+                  <button type="submit" class="button" style="vertical-align:middle">Book Now</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
+        </div>
       </div>
-    </div>
-  </section>
-
+    </section>
+  
 </body>
   <!-- Book An Oppointment Area End -->
   
