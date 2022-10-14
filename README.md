@@ -1,4 +1,4 @@
-#Sir there was a problem with pushing to main. 'Final-Application' is our main.
+Sir there was a problem with pushing to main. 'Final-Application' is our main.
 
 ## DA3330_BAD_GP_Phoenix
 Developing a web application for an E-Channeling system
