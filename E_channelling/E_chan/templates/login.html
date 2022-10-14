@@ -12,6 +12,7 @@
 		margin-left: 15px;
 		margin-right: 15px;
 		margin-bottom: 15px;
+    margin-top: 8px;
     
   }
   .page-holder {
@@ -21,18 +22,24 @@
 	.bg-cover {
   		background-size: cover !important;
 	}
-    
+
+  button{
+    margin-bottom: 1.5cm;
+    margin-top: 0.5cm;
+  }
   
 </style>
-
+<head>
+</head>
+<body>
 <div style = "background: url(https://i.pinimg.com/originals/1a/ee/5c/1aee5c344846f449350feae457ea350e.jpg)" class="page-holder bg-cover">
-  <p><h1>A heritage in care. A reputation in excellence.</h1></p>
-  <p><h4>Phoenix E-Channelling</h4></p>
+  <p><h1>"A heritage in care. A reputation in excellence."</h1></p>
+  <p><h4><em>Phoenix E-Channelling</em></h4></p>
 {% load crispy_forms_tags %}
 
 <!--Login-->
   <div class="container py-5" text-align:center>
-    <h1>Login</h1>
+    <h2>Login</h2>
     <form method="POST">
       {% csrf_token %}
       {{ login_form|crispy }}
@@ -40,4 +47,5 @@
     </form>
     <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
   </div>
+</body>
 
