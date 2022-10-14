@@ -12,7 +12,9 @@
 Dashboard
 {% endif %}
 {% endblock content %}
-
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
 <head>
 <style>
 header .item {
@@ -183,7 +185,126 @@ header:hover .owl-next {
   right: 0px;
   opacity: 1;
 }
+/* FontAwesome for working BootSnippet :> */
 
+.btn-primary:hover,
+.btn-primary:focus {
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
 </style>    
 </head>
 <body>
@@ -239,9 +360,327 @@ header:hover .owl-next {
              </div>
         </div>
     </div>
-</header>
-{% include 'quick access.html'%} {% include 'specialaties.html'%}
+    <!-- Access -->
+<section id="team" class="pb-5">
+  <div class="container">
+      <h5 class="section-title h1">QUICK ACCESS</h5>
+      <div class="row">
+          <!-- Access -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" >
+                  <div class="mainflip flip-0">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/telemedicine-concept-by-tablet-picture-id1341999874?k=20&m=1341999874&s=612x612&w=0&h=ZKRpQ-mdE4SjzzXrfohAWjMtSRs-4pLfUSuNHVkkpQ8=" alt="card image"></p>
+                                  <h4 class="card-title">Home Care</h4>
+  
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Home Care</h4>
+                                  <p class="card-text">This service is for assistance in monitoring COVID 19 positive asymptomatic and mildly symptomatic patients, who have been deemed fit for home quarantine by the government healthcare services.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Access -->
+          <!-- Access -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/shopping-cart-with-medicine-picture-id182485916?k=20&m=182485916&s=612x612&w=0&h=60pOQXCVQBg2GRh4JJIP2kREzjW_TkseXe6y78BYwVQ="></p>
+                                  <h4 class="card-title">Order Medicine</h4>
+              
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Order Medicine</h4>
+                                  <p class="card-text">Select your preferred pharmacy, order your prescription medicine online and have it delivered straight to your home.</p>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Access -->
+          <!-- Access -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/thank-you-for-your-visit-picture-id520687953?k=20&m=520687953&s=612x612&w=0&h=pRsAKAT2yqeMQH7NXlQHDHHq8EWG1_Qm1IlnJWSArAQ="></p>
+                                  <h4 class="card-title">Concierge Service</h4>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Concierge Service</h4>
+                                  <p class="card-text">Give your loved ones the best health care with no waiting time and cashless pay. The concierge provides personalized healthcare at a premium price.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Access -->
+          <!-- Access -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/deliveryman-in-protective-suit-with-a-box-near-a-door-picture-id1251176842?k=20&m=1251176842&s=612x612&w=0&h=DiXmFWOLybuONihdZ5vIbiWvXquBgMlVEudTvCakjQE=" alt="card image"></p>
+                                  <h4 class="card-title">Eco Channelling</h4>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Eco Channelling</h4>
+                                  <p class="card-text">Eco Channelling provides doorstep delivery in an eco-friendly manner.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Access -->
+          <!-- Access -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/medical-research-scientist-in-laboratory-picture-id1090601640?k=20&m=1090601640&s=612x612&w=0&h=n2Z-ZEDKPelTURz8-nb0fmvIyv8uaeEAjzzRODDDuNQ=" alt="card image"></p>
+                                  <h4 class="card-title">Lab Tests</h4>
+              
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Lab Tests</h4>
+                                  <p class="card-text">E-Channeling now enables you to get all your laboratory tests done from home and have the reports delivered right to your doorstep!</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Access -->
+          <!-- Access -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/woman-making-purchases-online-picture-id1166129160?k=20&m=1166129160&s=612x612&w=0&h=xRsXmAg9geiEzzh5lRij-K7Of2UsB736WrB29IqqO_o=" alt="card image"></p>
+                                  <h4 class="card-title">Claim Refund</h4>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Claim Refund</h4>
+                                  <p class="card-text">Couldn't utilize the service of the professional you channeled? Don't fret, your money will be transferred back to you!</p>
+                                 
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Access -->
+
+      </div>
+  </div>
+</section>
+<!-- Team -->
+    <section id="team" class="pb-5">
+      <div class="container">
+          <h5 class="section-title h1">OUR SPECIALITIES</h5>
+          <div class="row">
+              <!-- Team member -->
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="image-flip" >
+                      <div class="mainflip flip-0">
+                          <div class="frontside">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/stethoscope-with-heart-picture-id464853534?k=20&m=464853534&s=612x612&w=0&h=Or8h8psaxVDWqeIjU1j8Na2UQaveem1zKP2eWgWpcb0=" alt="card image"></p>
+                                      <h4 class="card-title">Channel a Cardiologist</h4>
+      
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="backside">
+                              <div class="card">
+                                  <div class="card-body text-center mt-4">
+                                      <h4 class="card-title">Cardiologist</h4>
+                                      <p class="card-text">A Cardiologist specializes in the structure, functions, and diseases of the heart and blood vessels.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- ./Team member -->
+              <!-- Team member -->
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                      <div class="mainflip">
+                          <div class="frontside">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <p><img class=" img-fluid" src=https://media.istockphoto.com/photos/medical-instruments-stethoscope-in-hand-of-newborn-baby-girl-picture-id485351714?k=20&m=485351714&s=612x612&w=0&h=_bSfM1Y9-oWroVf8DWG225n_11Vd2eeNJK5fD_k5Vrg=></p>
+                                      <h4 class="card-title">Channel a Pediatrician</h4>
+                  
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="backside">
+                              <div class="card">
+                                  <div class="card-body text-center mt-4">
+                                      <h4 class="card-title">Pediatrician</h4>
+                                      <p class="card-text">A Pediatrician is a medical practitioner specializing in children and their diseases.</p>
+                                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- ./Team member -->
+              <!-- Team member -->
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                      <div class="mainflip">
+                          <div class="frontside">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/otoscope-close-up-picture-id600098504?k=20&m=600098504&s=612x612&w=0&h=owbMr3poRf7KdOczJY3bnxe8crCfpORPX8A4fG8dQY0="></p>
+                                      <h4 class="card-title">Channel an Eye Srugeon</h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="backside">
+                              <div class="card">
+                                  <div class="card-body text-center mt-4">
+                                      <h4 class="card-title">Eye Surgeon</h4>
+                                      <p class="card-text">A Pediatrician is a medical practitioner specializing in children and their diseases.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- ./Team member -->
+              <!-- Team member -->
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                      <div class="mainflip">
+                          <div class="frontside">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/mental-health-picture-id134956644?k=20&m=134956644&s=612x612&w=0&h=LtK-iMwB4SoGRtQKBQsebqLJKabqc_uOa4JJv9odwmE=" alt="card image"></p>
+                                      <h4 class="card-title">Channel a Neurologist</h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="backside">
+                              <div class="card">
+                                  <div class="card-body text-center mt-4">
+                                      <h4 class="card-title">Neurologist</h4>
+                                      <p class="card-text">A Neurologist is a medical doctor who specializes on diseases of the nervous system of diseases of the nervous system including the brain and spinal cord.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- ./Team member -->
+              <!-- Team member -->
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                      <div class="mainflip">
+                          <div class="frontside">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/stethoscope-and-medical-scan-picture-id183879757?k=20&m=183879757&s=612x612&w=0&h=mNbltIGy3VCukXH0WTd3il9oU_HbTzipOILLqsYL8Mg=" alt="card image"></p>
+                                      <h4 class="card-title">Channel a Gynecologist</h4>
+                  
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="backside">
+                              <div class="card">
+                                  <div class="card-body text-center mt-4">
+                                      <h4 class="card-title">Gynecologist</h4>
+                                      <p class="card-text">A Gynecologist is a medical specialist who has specialized in the diseases of women & girls, particularly of their female reproductive system.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- ./Team member -->
+              <!-- Team member -->
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                      <div class="mainflip">
+                          <div class="frontside">
+                              <div class="card">
+                                  <div class="card-body text-center">
+                                      <p><img class=" img-fluid" src="https://media.istockphoto.com/photos/collection-of-equipment-medicine-picture-id1328780148?k=20&m=1328780148&s=612x612&w=0&h=FoosdqfB97dZo7-S9fNJu6OxUvemfcufIHWDIefokLo=" alt="card image"></p>
+                                      <h4 class="card-title">Channel a Physician</h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="backside">
+                              <div class="card">
+                                  <div class="card-body text-center mt-4">
+                                      <h4 class="card-title">Physician</h4>
+                                      <p class="card-text">A Physician is a Medical Practitioner who specializes in general or internal medicine (diagnosing & treatment) other than surgical means.</p>
+                                     
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- ./Team member -->
+  
+          </div>
+      </div>
+  </section>
+  <!-- Team -->  
+   
+</header> 
 {% include 'footer.html'%}
+
 </body>
 <script>
 $('.owl-carousel').owlCarousel ({
