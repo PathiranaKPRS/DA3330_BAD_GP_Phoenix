@@ -64,15 +64,15 @@ header .item .cover .header-content h2 {
 }
 
 header .item .cover .header-content h1 {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 600;
   margin: 5px 0 20px;
   word-spacing: 3px;
   color: #fff;
 }
 
-header .item .cover .header-content h4 {
-  font-size: 24px;
+header .item .cover .header-content p {
+  font-size: 15px;
   font-weight: 300;
   line-height: 36px;
   color: #fff;
@@ -96,7 +96,7 @@ header .owl-item.active h2 {
   animation-delay: 0.3s;
 }
 
-header .owl-item.active h4 {
+header .owl-item.active p {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -240,8 +240,8 @@ header:hover .owl-next {
         </div>
     </div>
 </header>
-{% include 'quick access.html'%}
-
+{% include 'quick access.html'%} {% include 'specialaties.html'%}
+{% include 'footer.html'%}
 </body>
 <script>
 $('.owl-carousel').owlCarousel ({
