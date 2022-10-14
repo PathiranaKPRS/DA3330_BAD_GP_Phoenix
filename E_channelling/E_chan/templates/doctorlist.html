@@ -46,7 +46,9 @@
   
   <ul class="w3-ul w3-card-4">
     <li class="w3-bar">
-      <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+      {% if user.is_authenticated %}
+      <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+      {% endif %}
       {% if user.is_staff %}
       <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
       {% endif %}
@@ -63,7 +65,9 @@
     </li>
 
     <li class="w3-bar">
-        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+        {% if user.is_authenticated %}
+        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+        {% endif %}
         {% if user.is_staff %}
         <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
         {% endif %}
@@ -86,7 +90,9 @@
     
     <ul class="w3-ul w3-card-4">
       <li class="w3-bar">
-        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+        {% if user.is_authenticated %}
+        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+        {% endif %}
         {% if user.is_staff %}
         <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
         {% endif %}
@@ -102,7 +108,9 @@
       </li>
   
       <li class="w3-bar">
-          <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+          {% if user.is_authenticated %}
+          <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+          {% endif %}
           {% if user.is_staff %}
           <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
           {% endif %}
@@ -125,7 +133,9 @@
     
     <ul class="w3-ul w3-card-4">
       <li class="w3-bar">
-        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+        {% if user.is_authenticated %}
+        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+        {% endif %}
         {% if user.is_staff %}
         <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
         {% endif %}
@@ -141,7 +151,9 @@
       </li>
   
       <li class="w3-bar">
-          <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+          {% if user.is_authenticated %}
+          <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+          {% endif %}
           {% if user.is_staff %}
           <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
           {% endif %}
@@ -164,7 +176,9 @@
     
     <ul class="w3-ul w3-card-4">
       <li class="w3-bar">
-        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+        {% if user.is_authenticated %}
+        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+        {% endif %}
         {% if user.is_staff %}
         <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
         {% endif %}
@@ -186,7 +200,9 @@
     
     <ul class="w3-ul w3-card-4">
       <li class="w3-bar">
-        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>Add Appointment</h5></span>
+        {% if user.is_authenticated %}
+        <span class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><a href="{% url 'afterlogin' %}"><h5>Add Appointment</h5></a></span>
+        {% endif %}
         {% if user.is_staff %}
         <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-light-gray w3-xlarge w3-right"><h5>X</h5></span>
         {% endif %}
